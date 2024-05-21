@@ -1,0 +1,137 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+html, body {
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Página de login */
+.box-login {
+    box-shadow: 10px 10px 5px rgb(200, 200, 200);
+    max-width: 600px;
+    width: 95%;
+    padding: 20px 2%;
+    background: rgb(245, 245, 245); /* Cinza claro */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.box-login h2 {
+    text-align: center;
+    font-size: 19px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: black;
+}
+/* Estilização dos inputs de RA e senha */
+.box-login input[type="text"][name="ra"],
+.box-login input[type="password"][name="password"] {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 1px solid #ccc; /* Modificado para corresponder ao estilo geral */
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+/* Estilização do label de RA e senha */
+.box-login label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+/* Estilização do label ao focar ou quando o input está preenchido */
+.box-login input[type="text"][name="ra"]:focus ~ label,
+.box-login input[type="text"][name="ra"]:valid ~ label,
+.box-login input[type="password"][name="password"]:focus ~ label,
+.box-login input[type="password"][name="password"]:valid ~ label {
+  transform: translateY(-50%) scale(.9);
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #e8e8e8;
+}
+
+/* Estilização do input ao focar */
+.box-login input[type="text"][name="ra"]:focus,
+.box-login input[type="password"][name="password"]:focus {
+  border-color: rgb(150, 150, 200);
+}
+
+.box-login input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+.box-login input[name=user],
+.box-login input[name=password] {
+    background: white; /* Alterado para branco */
+}
+
+/* Estilização dos botões */
+.box-login input[type=submit],
+.box-login input[type=button] {
+    background-color: #eee;
+    border: none;
+    padding: 0.1rem; /* Centralização do botão */
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: lightcoral;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+    margin-top: 8px; /* Para manter consistência com outros inputs */
+}
+
+.box-login input[type=submit]:active,
+.box-login input[type=button]:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+}
+
+.box-login input[type=submit]:hover:not(:disabled),
+.box-login input[type=button]:hover:not(:disabled) {
+    background: lightcoral;
+    color: white;
+    text-shadow: 0 0.1rem #bcb4b4;
+}
+
+.box-login input[type=submit]:disabled,
+.box-login input[type=button]:disabled {
+    cursor: auto;
+    color: grey;
+}
+
+/* Box erro do painel */
+.erro-box {
+    width: 100%;
+    padding: 8px 2%;
+    text-align: center;
+    background: #F75353;
+    font-size: 15px;
+}
+
+/* Fim página login *
